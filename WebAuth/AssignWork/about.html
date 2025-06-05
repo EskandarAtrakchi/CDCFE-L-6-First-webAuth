@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Theme Made By www.w3schools.com -->
+    <title>about</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--website icon-->
+    <link rel="website icon" href="https://moonbeam.network/wp-content/uploads/2020/10/rotating-ethereum-logo.gif">
+    <!--footers css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--footers js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <!--main css dark-->
+    <link id="swap" rel="stylesheet" href="css/style.css">
+    <!--social icons css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--main js-->
+    <script src="js/main.js"> </script>
+
+    <script>
+        function start() {
+            browserDetection();
+            startDate();
+            hitCount();
+            scrollBox();
+            slideShow();
+        }
+    </script>
+    <style>
+        .container-fluid {
+            padding: 60px 50px;
+        }
+
+        .logo-small {
+            color: #f4511e;
+            font-size: 50px;
+        }
+
+        .logo {
+            color: #f4511e;
+            font-size: 200px;
+        }
+
+        .thumbnail {
+            padding: 0 0 15px 0;
+            border: none;
+            border-radius: 0;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+
+        .carousel-control.right,
+        .carousel-control.left {
+            color: #f4511e;
+        }
+
+        .carousel-indicators li {
+            border-color: #f4511e;
+        }
+
+        .carousel-indicators li.active {
+            background-color: #f4511e;
+        }
+
+        .item h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            font-weight: 400;
+            font-style: italic;
+            margin: 70px 0;
+        }
+
+        .item span {
+            font-style: normal;
+        }
+
+        .panel {
+            border: 1px solid #f4511e;
+            border-radius: 0 !important;
+            transition: box-shadow 0.5s;
+        }
+
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+        }
+
+        .slideanim {
+            visibility: hidden;
+        }
+
+        .slide {
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
+        }
+
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+            }
+        }
+    </style>
+</head>
+
+<body onload="start()" id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <!-- All HTML elements go here -->
+
+    <div class="tracking-in-expand-fwd">
+
+        <!-- start header -->
+
+        <header>
+
+            <div id="header">
+                <div class="CHeader">
+                    <div id="marqueeandlogoandbtns">
+                        <a href="https://eskandarte.w3spaces.com/"><img src="https://moonbeam.network/wp-content/uploads/2020/10/rotating-ethereum-logo.gif" id="logo" class="text-flicker-in-glow" onclick="newWindow()" alt="IMAGE-HERE"></a>
+                        <button onClick="swapStylesheet('css/style.css')" class="custom-btn btn-5" id="chanemode"><span id="loginBTNSticky">Dark</span></button>
+                        <button onClick="swapStylesheet('css/styleLight.css')" class="custom-btn btn-5" id="chanemode"><span id="loginBTNSticky">Light</span></button>
+
+                        <!--class="mytext" onmouseover="mouseOver()" onmouseout="mouseOut()"-->
+                        <marquee id="FirstMarquee" class="text-flicker-in-glow">
+                            <span class="MarqueeStyling">This <span id="browser"></span> page been browsed <span id="hits"></span> times</span>
+                            <br>
+                            <span class="MarqueeStyling">Updated on <span id="date"></span></span>
+                        </marquee>
+                        <form class="search" action="search.php">
+                            <input name="q" placeholder="Search..." type="search" class="text-flicker-in-glow">
+                        </form>
+                    </div>
+                </div>
+                <div class="topnav" id="myTopnav">
+                    <a href="index.html">Home</a>
+                    <a href="news.html">News</a>
+                    <a href="contactus.html">Contact</a>
+                    <a href="about.html" class="active">About</a>
+                    <a href="programming.html">Programming</a>
+                    <a href="FAQ.html">FAQ</a>
+                    <a href="walletgenerator.html">Wallet-Generator</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <!--start body here-->
+        <div id="firstDiv">
+
+            <!-- Container (About Section) -->
+            <div id="about" class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h2> Coláiste Dhúlaigh College of Further Education (CDCFE) </h2><br>
+                        <h4>offers Post Leaving Certificate (PLC) Courses at QQI level 5 and 6 and at Higher National Diploma in a wide range of disciplines.</h4><br>
+                        <p>
+                            Coláiste Dhúlaigh College of Further Education (CDCFE) is a college located in Coolock, North Dublin, Ireland. It offers a range of further education courses, including full-time and part-time programs in areas such as business, computing, engineering, and healthcare. The college also offers courses for adult learners and provides access to higher education through its links with Irish universities. It is named after the Irish language scholar and lexicographer An tAthair Peadar Ua Laoghaire.
+                        </p>
+                        <br>
+                        <button class="custom-btn btn-5" id="chanemode" onclick="location.href='#contact'">Get in Touch</button>
+
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="glyphicon glyphicon-signal logo"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid bg-grey">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h2>Our Values</h2><br>
+                        <h4><strong>MISSION:</strong> Coláiste Dhúlaigh College of Further Education (CDCFE) offers a range of courses for computer science students. These courses can help students develop the skills and knowledge they need to pursue careers in the field of computer science.</h4><br>
+                        <p><strong>VISION:</strong> Some examples of courses that may be of interest to computer science students at CDCFE include:
+
+                            Computer Science: This course is designed to provide students with a foundation in computer science, including programming, data structures, algorithms, and computer systems.
+
+                            Web Development: This course teaches students how to design and develop websites using languages such as HTML, CSS, and JavaScript.
+
+                            Overall, CDCFE can provide computer science students with a strong foundation in the field, as well as practical skills that can be applied in a variety of computer science-related careers.</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="glyphicon glyphicon-globe logo slideanim"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Container (Services Section) -->
+            <div id="services" class="container-fluid text-center">
+                <h2>SERVICES</h2>
+                <h4>What we offer</h4>
+                <br>
+                <div class="row slideanim">
+                    <div class="col-sm-4">
+                        <span class="glyphicon glyphicon-off logo-small"></span>
+                        <h4>POWER</h4>
+                        <p>A range of computer science courses</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="glyphicon glyphicon-heart logo-small"></span>
+                        <h4>Applied</h4>
+                        <p>Practical, hands-on learning</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="glyphicon glyphicon-lock logo-small"></span>
+                        <h4>Expert</h4>
+                        <p>Experienced faculty</p>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row slideanim">
+                    <div class="col-sm-4">
+                        <span class="glyphicon glyphicon-leaf logo-small"></span>
+                        <h4>intimate</h4>
+                        <p>Small class sizes</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="glyphicon glyphicon-certificate logo-small"></span>
+                        <h4>Professional</h4>
+                        <p>Access to industry-standard equipment and resources</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="glyphicon glyphicon-wrench logo-small"></span>
+                        <h4>Academic</h4>
+                        <p>Strong links to universities</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Container (Portfolio Section) -->
+            <div id="portfolio" class="container-fluid text-center bg-grey">
+                <h2>Portfolio</h2><br>
+                <h4>What we have teach</h4>
+                <div class="row text-center slideanim">
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="https://images.pexels.com/photos/11035547/pexels-photo-11035547.jpeg?auto=compress&cs=tinysrgb&w=600" alt="IMAGE-HERE" width="400" height="300">
+                            <p><strong style="color:crimson;">Java</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="https://images.pexels.com/photos/5952651/pexels-photo-5952651.jpeg?auto=compress&cs=tinysrgb&w=600" alt="IMAGE-HERE" width="400" height="300">
+                            <p style="color:crimson;"><strong>CyberSecurity</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="thumbnail">
+                            <img src="https://images.pexels.com/photos/5380659/pexels-photo-5380659.jpeg?auto=compress&cs=tinysrgb&w=600" alt="IMAGE-HERE" width="400" height="300">
+                            <p style="color:crimson;"><strong>Web-Development</strong></p>
+                        </div>
+                    </div>
+                </div><br>
+
+                <h2>What our students say</h2>
+                <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <h4>"The computer science course is the best. I am so happy with it!"<br><span>Appul Joshua, student</span></h4>
+                        </div>
+                        <div class="item">
+                            <h4>"One word... WOW!!"<br><span>Eskandar, Student</span></h4>
+                        </div>
+                        <div class="item">
+                            <h4>"Could I... BE any more happy with this course?"<br><span>Yonus, Student</span></h4>
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Container (Contact Section) -->
+            <div id="contact" class="container-fluid bg-grey">
+                <h2 class="text-center">CONTACT</h2>
+                <div class="row">
+                    <div class="col-sm-5">
+                        <p>Contact us and we'll get back to you within 24 hours.</p>
+                        <p><span class="glyphicon glyphicon-map-marker"></span> Dublin, Ireland</p>
+                        <p><span class="glyphicon glyphicon-phone"></span> +00353151515</p>
+                        <p><span class="glyphicon glyphicon-envelope"></span> cdcfe@something.com</p>
+                    </div>
+                    <div class="col-sm-7 slideanim">
+                        <div class="row" style="display:flex;">
+                            <div style=" padding-left:2%; padding-right:2.5%; width: 100%;">
+                                <input class="form-control" id="name" name="name" placeholder="First-Name" type="text" required>
+
+                                <input class="form-control" id="email" name="name" placeholder="Last-Name" type="text" required>
+                            </div>
+                        </div>
+                        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                        <div id="#" class="row">
+                            <div class="col-sm-12 form-group" id="statusBarPrecentage">
+                                <button type="submit" onclick="statusBar()" class="custom-btn btn-5" id="chanemode">Send</button>
+
+                                <button type="submit" onclick="location.href='contactus.html'" class="custom-btn btn-5" id="chanemode">Main-form?</button>
+                            </div>
+                        </div>
+                        <div id="loadingbarbyEskandar">
+                            <div style="display:flex;">
+
+                                <div id="myBar" style="display:none; background-color: rgb(31, 26, 44);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image of -->
+    <img src="https://images.pexels.com/photos/592753/pexels-photo-592753.jpeg?auto=compress&cs=tinysrgb&w=600" style="height:250px; width:100%;" alt="IMAGE-HERE">
+
+
+
+    <!-- start footer -->
+    <div class="footer-dark">
+        <footer>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3 id="copyRightFrames">Useful-links</h3>
+                        <ul>
+                            <li><a href="https://www.w3schools.com/js/">Web design</a></li>
+                            <li><a href="https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.8+commit.dddeac2f.js">Blockchain</a></li>
+                            <li><a href="contactus.html">Contact-Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3 id="copyRightFrames">About</h3>
+                        <ul>
+                            <li><a href="programming.html">Coding</a></li>
+                            <li><a href="https://www.cdcfe.ie/">CDCFE</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3 id="copyRightFrames">Programming languages</h3>
+                        <p>C, C++, Java, Python, and Ruby. These languages are used to create software applications, websites, and other systems. They vary in syntax, semantics, and features, and are designed to be easy for humans to read and write.</p>
+
+                    </div>
+                    <div class="container" id="socialmediaicons">
+                        <a href="https://www.icloud.com/" class="FooterSocialIcons"><i class="fa fa-apple" id="apple"></i></a>
+                        <a href="https://twitter.com/AtrakchiE"><i class="fa fa-twitter" id="twitter"></i></a>
+                        <a href="https://github.com/EskandarAtrakchi/CDCFE-L-6-First/tree/main/WebAuth/AssignWork"><i class="fa fa-github-square github" id="github"></i></a>
+                        <a href="https://www.facebook.com/EskandarTech/"><i class="fa fa-facebook-square" id="facebook"></i></a>
+
+                    </div>
+                </div>
+        </footer>
+        <p class="copyright" id="myTextCopyright" onmouseover="mouseOver()" onmouseout="mouseOut()"><strong>Eskandar Atrakchi &copy; 2023</strong></p>
+
+        <a href="#top"><strong>
+                <h1 style="float:right;"><img src="https://archive.org/download/arrowup/arrowup.gif" style="width:13%; height:33%; float:right;" alt="IMAGE-HERE" /></h1>
+            </strong></a>
+    </div>
+    <!-- end footer -->
+    </div>
+    <!--end styling div-->
+    <div class="icon-bar">
+        <a href="https://www.facebook.com/EskandarTech/" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/AtrakchiE" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/eskandar-atrakchi-47603a22b/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/@eskandartech6237/videos" class="youtube"><i class="fa fa-youtube"></i></a>
+        <button onclick="document.getElementById('id01').style.display='block'" id="disableloginbtn"><em id="loginBTNSticky">Login</em></button>
+    </div>
+    <!--start login button-->
+    <div id="id01" class="modal" class="email">
+
+        <form class="modal-content animate">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="https://media.istockphoto.com/id/1279388417/photo/cyber-security-digital-crime-concept.jpg?b=1&s=612x612&w=0&k=20&c=W5ep5z1mQU9hGYxDkieT7kQeP0lT1C5GWbGEAzQJ1c8=" alt="IMAGE-HERE" class="avatar">
+            </div>
+
+            <div class="LoginFrame">
+                <label><b>email</b></label>
+                <input type="text" placeholder="Enter email" name="id" onblur="validateEmail(this);" required>
+
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="pass" required>
+
+
+                <div style="display:flex;">
+
+                    <button type="submit" onclick="pasuser(this.form)" class="custom-btn btn-5" id="chanemode" style="background-color:rgb(19, 19, 19); color: aliceblue;">Submit</button>
+
+                    <div style=" padding-right:2%;"></div>
+
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="custom-btn btn-5" id="chanemode" style="background-color:rgb(19, 19, 19); color: aliceblue;">Cancel?</button>
+                </div>
+                <label>
+                    <div>
+
+
+                        <input type="checkbox" checked="checked" name="remember" style="Color:red;">
+                        <h4 style="Color:rgb(255, 0, 0);"><strong>Remember me?</strong></h4>
+                    </div>
+                </label>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <!--end login button-->
+    <!--start registeration button here-->
+
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h3>Register with us</h3>
+
+            <label><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" onblur="validateEmail(this);" required>
+
+            <label><b>Create Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" class="btn" id="SignUpBTN" onclick="closeForm()">Create now</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!--end registeration button here-->
+    <button class="open-button" onclick="openForm()" id="loginBTNSticky">sign up?</button>
+
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+
+            $(window).scroll(function() {
+                $(".slideanim").each(function() {
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        })
+    </script>
+</body><!-- end Body  -->
+
+</html>

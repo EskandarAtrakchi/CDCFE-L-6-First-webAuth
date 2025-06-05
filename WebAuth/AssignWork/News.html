@@ -1,0 +1,360 @@
+<!DOCTYPE html> <!-- start HTML DOC -->
+<html lang="en">
+<!-- start head -->
+
+<head>
+    <meta charset="UTF-8">
+    <!--styling for crypto prices is targeted by the script -->
+    <style id="myStyles"></style>
+    <!--calling the API charts from Google -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!--link for Fonts by Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--website icon on the tab-->
+    <link rel="website icon" href="https://moonbeam.network/wp-content/uploads/2020/10/rotating-ethereum-logo.gif">
+    <!--footers css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--footers js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <!--main css dark-->
+    <link id="swap" rel="stylesheet" href="css/style.css">
+    <!--social icons css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--main js-->
+    <script src="js/main.js"> </script>
+    <script>
+        function start() {
+            browserDetection();
+            startDate();
+            hitCount();
+            scrollBox();
+            slideShow();
+        }
+    </script>
+    <!--calling the API from Google for the charts -->
+    <script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+        //the function is in the js folder
+    </script>
+    <!--set chars-->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--set the screen to device width-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--start title -->
+    <title>News</title>
+</head>
+<!-- end head  -->
+<!-- start Body -->
+
+<body onload="start()">
+    <!-- All HTML elements go here -->
+
+    <div class="tracking-in-expand-fwd">
+
+        <!-- start header -->
+
+        <header>
+
+            <div id="header">
+                <div class="CHeader">
+                    <div id="marqueeandlogoandbtns">
+                        <a href="https://eskandar.w3spaces.com/#about"><img src="https://moonbeam.network/wp-content/uploads/2020/10/rotating-ethereum-logo.gif" id="logo" class="text-flicker-in-glow" onclick="newWindow()" alt="IMG-HERE"></a>
+                        <button onClick="swapStylesheet('css/style.css')" class="custom-btn btn-5" id="chanemode"><span id="loginBTNSticky">Dark</span></button>
+                        <button onClick="swapStylesheet('css/styleLight.css')" class="custom-btn btn-5" id="chanemode"><span id="loginBTNSticky">Light</span></button>
+
+                        <!--class="mytext" onmouseover="mouseOver()" onmouseout="mouseOut()"-->
+                        <marquee id="FirstMarquee" class="text-flicker-in-glow">
+                            <span class="MarqueeStyling">This <span id="browser"></span> page been browsed <span id="hits"></span> times</span>
+                            <br>
+                            <span class="MarqueeStyling">Updated on <span id="date"></span></span>
+                        </marquee>
+                        <form class="search" action="search.php">
+                            <input name="q" placeholder="Search..." type="search" class="text-flicker-in-glow">
+                        </form>
+                    </div>
+                </div>
+                <div class="topnav" id="myTopnav">
+                    <a href="index.html">Home</a>
+                    <a href="news.html" class="active">News</a>
+                    <a href="contactus.html">Contact</a>
+                    <a href="about.html">About</a>
+                    <a href="programming.html">Programming</a>
+                    <a href="FAQ.html">FAQ</a>
+                    <a href="walletgenerator.html">Wallet-Generator</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <!--start body content -->
+
+        <div id="firstDiv">
+            <h2>&nbsp;</h2>
+            <h1 style="text-align:center; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; color:blueviolet">Blockchain technology & programming using Solidity</h1>
+            <h2>&nbsp;</h2>
+            <div style="display:flex;">
+                <div id="divS">
+                    <p>
+                        Blockchain is a distributed database that allows for secure and transparent record-keeping and transfer of data or assets. Cryptocurrencies, such as Bitcoin and Ethereum, are digital assets that use blockchain technology to facilitate secure and decentralized financial transactions.
+                        <br>
+                    <h2>&nbsp;</h2>
+
+
+                    Solidity is a programming language specifically designed for writing smart contracts on the Ethereum blockchain. Smart contracts are self-executing contracts with the terms of the agreement between buyer and seller being directly written into lines of code.
+                    <br>
+                    <h2>&nbsp;</h2>
+                    They are stored on the blockchain and can be triggered automatically when certain conditions are met.
+                    <br>
+                    Using a programming language like Solidity to build on the blockchain allows developers to create decentralized applications (DApps) and automate processes in a secure and transparent manner.
+
+                </div>
+                <div class="CHeader" style="width:50%;">
+                    <div class="SolidityIFrameDiv">
+                        <iframe src="https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.8+commit.dddeac2f.js" width="100%" height="100%">
+
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <button onclick="soildityPopup()" class="ShowHeader">Solidity-IDE</button>
+            <h2>&nbsp;</h2>
+            <div id="SecondDivNewsPage">
+                <h1 style="text-align:center; text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; color:blueviolet">Programming languages that are in demand in 2020</h1>
+                <h2>&nbsp;</h2>
+                <div style="display: flex;">
+                    <div style="padding-right:2%;">
+                        <p>
+                            Solidity is a programming language used to create smart contracts on the Ethereum blockchain.
+                            <br>
+                            It allows developers to build decentralized applications that facilitate, verify, and enforce the negotiation or performance of a contract.
+                            <br>
+                            These applications have the potential to revolutionize industries such as supply chain management, finance, and voting systems. Java, Python, C++, C#, and JavaScript are also popular programming languages used in the development of a variety of applications, including web, mobile, and desktop applications.
+                            <br>
+                            These languages have high demand due to their reliability, performance, versatility, and large developer communities.
+                            <br>
+                        </p>
+                    </div>
+                    <div>
+
+                        <div id="piechart" class="CHeader" id="pieC"></div>
+
+                    </div>
+                </div>
+                <button onclick=" pieChart()" class="ShowHeader">Pie-Chart</button>
+                <!-- end the pie chart -->
+            </div>
+            <h2>&nbsp;</h2>
+
+            <!-- start live prices -->
+            <div style="display: flex;">
+                <div style="width:73%;">
+                    <p>
+                        Cryptocurrencies are digital or virtual currencies that use cryptography for secure financial transactions. Bitcoin, which was created in 2009, is the first and most widely known cryptocurrency. Since then, numerous cryptocurrencies have been created, and their popularity has grown significantly in recent years.
+
+                        One of the main reasons for the rise in cryptocurrencies is the increasing acceptance of them as a legitimate form of payment and investment. In the past decade, the value of many cryptocurrencies has increased significantly. For example, the price of Bitcoin, the largest and most well-known cryptocurrency, has gone up from less than $1 in 2010 to over $50,000 in 2021. Other cryptocurrencies have also seen significant price increases.
+
+                        However, it's important to note that the prices of cryptocurrencies are highly volatile and can fluctuate significantly over short periods of time. This means that investing in cryptocurrencies carries a high level of risk, and it's important for individuals to carefully consider their investment decisions before committing any funds.
+                    </p>
+                </div>
+                <div style="width:27%;" class="CHeader">
+                    <script>
+                        ! function() {
+                            var e = document.getElementsByTagName("script"),
+                                t = e[e.length - 1],
+                                n = document.createElement("script");
+
+                            function r() {
+                                var e = crCryptocoinPriceWidget.init({
+                                    base: "USD,EUR",
+                                    items: "BTC,ETH,XRP,NANO",
+                                    backgroundColor: "0a2713",
+                                    streaming: "1",
+                                    rounded: "1",
+                                    boxShadow: "9",
+                                    border: "5"
+                                });
+                                t.parentNode.insertBefore(e, t)
+                            }
+                            n.src = "https://co-in.io/widget/pricelist.js?items=BTC%2CETH%2CLTC%2CXMR%2CDASH", n.async = !0, n.readyState ? n.onreadystatechange = function() {
+                                "loaded" != n.readyState && "complete" != n.readyState || (n.onreadystatechange = null, r())
+                            } : n.onload = function() {
+                                r()
+                            }, t.parentNode.insertBefore(n, null)
+                        }();
+                    </script>
+                </div>
+            </div>
+            <button onclick="liveprices()" class="ShowHeader">Live-Prices</button>
+            <!--This div for crypto prices and other elements displayed flex-->
+        </div>
+
+
+        <!-- start footer -->
+        <div class="footer-dark">
+            <footer>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3 id="copyRightFrames">Useful-links</h3>
+                            <ul>
+                                <li><a href="https://www.w3schools.com/js/">Web design</a></li>
+                                <li><a href="https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.8+commit.dddeac2f.js">Blockchain</a></li>
+                                <li><a href="contactus.html">Contact-Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-md-3 item">
+                            <h3 id="copyRightFrames">About</h3>
+                            <ul>
+                                <li><a href="programming.html">Coding</a></li>
+                                <li><a href="https://www.cdcfe.ie/">CDCFE</a></li>
+                                <li><a href="careers.html">Careers</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 item text">
+                            <h3 id="copyRightFrames">Programming languages</h3>
+                            <p>C, C++, Java, Python, and Ruby. These languages are used to create software applications, websites, and other systems. They vary in syntax, semantics, and features, and are designed to be easy for humans to read and write.</p>
+
+                        </div>
+                        <div class="container" id="socialmediaicons">
+                            <a href="https://www.icloud.com/" class="FooterSocialIcons"><i class="fa fa-apple" id="apple"></i></a>
+                            <a href="https://twitter.com/AtrakchiE"><i class="fa fa-twitter" id="twitter"></i></a>
+                            <a href="https://github.com/EskandarAtrakchi/CDCFE-L-6-First/tree/main/WebAuth/AssignWork"><i class="fa fa-github-square github" id="github"></i></a>
+                            <a href="https://www.facebook.com/EskandarTech/"><i class="fa fa-facebook-square" id="facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+            <p class="copyright" id="myTextCopyright" onmouseover="mouseOver()" onmouseout="mouseOut()"><strong>Eskandar Atrakchi &copy; 2023</strong></p>
+
+            <a href="#top">
+                <h1 style="float:right;"><img src="https://archive.org/download/arrowup/arrowup.gif" style="width:13%; height:33%; float:right;" alt="IMG-HERE"></h1>
+            </a>
+        </div>
+        <!-- end footer -->
+    </div>
+    <!--end styling div-->
+    <div class="icon-bar">
+        <a href="https://www.facebook.com/EskandarTech/" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/AtrakchiE" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/eskandar-atrakchi-47603a22b/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.youtube.com/@eskandartech6237/videos" class="youtube"><i class="fa fa-youtube"></i></a>
+        <button onclick="document.getElementById('id01').style.display='block'" id="disableloginbtn"><em id="loginBTNSticky">Login</em></button>
+    </div>
+    <!--start login button-->
+    <div id="id01" class="modal" class="email">
+
+        <form class="modal-content animate">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="https://media.istockphoto.com/id/1279388417/photo/cyber-security-digital-crime-concept.jpg?b=1&s=612x612&w=0&k=20&c=W5ep5z1mQU9hGYxDkieT7kQeP0lT1C5GWbGEAzQJ1c8=" alt="IMG-HERE" class="avatar">
+            </div>
+
+            <div class="LoginFrame">
+                <label><b>email</b></label>
+                <input type="text" placeholder="Enter email" name="id" onblur="validateEmail(this);" required>
+
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="pass" required>
+
+
+                <div style="display:flex;">
+
+                    <button type="submit" onclick="pasuser(this.form)" class="custom-btn btn-5" id="chanemode" style="background-color:rgb(19, 19, 19); color: aliceblue;">Submit</button>
+
+                    <div style=" padding-right:2%;"></div>
+
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="custom-btn btn-5" id="chanemode" style="background-color:rgb(19, 19, 19); color: aliceblue;">Cancel?</button>
+                </div>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="Color:red;">
+                    <h4 style="Color:rgb(255, 0, 0);"><strong>Remember me?</strong></h4>
+                </label>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <!--end login button-->
+    <!--start registeration button here-->
+
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h3>Register with us</h3>
+
+            <label><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" onblur="validateEmail(this);" required>
+
+            <label><b>Create Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" class="btn" id="SignUpBTN" onclick="closeForm()">Create now</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!--end registeration button here-->
+    <button class="open-button" onclick="openForm()" id="loginBTNSticky">sign up?</button>
+
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+
+            $(window).scroll(function() {
+                $(".slideanim").each(function() {
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        })
+    </script>
+    <!-- end Body  -->
+</body>
+
+</html>
