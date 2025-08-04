@@ -36,7 +36,7 @@ export function CryptocurrencySection() {
         {showPrices ? (
           <div className="w-full h-full">
             <iframe
-              src="https://widget.coinlib.io/widget?type=full_v2&theme=dark&cnt=6&pref_coin_id=1505&graph=yes"
+              src="https://widget.coinlib.io/"
               width="100%"
               height="409px"
               scrolling="auto"
